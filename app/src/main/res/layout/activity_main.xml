@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_mb3"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp">
+
+        <TextView
+            android:id="@+id/pendaftaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pendaftaran"
+            android:textColor="#FFFFF0"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@id/pendaftaran"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Lengkap"
+                    android:textColor="#3D5AFE"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inputNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:drawable/divider_horizontal_bright"
+                    android:hint="Masukkan nama lengkap"
+                    android:textColorHint="#AAAAAA"
+                    android:inputType="textPersonName"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="#1A1A1A"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NIM Mahasiswa"
+                    android:textColor="#3D5AFE"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inputNim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:drawable/divider_horizontal_bright"
+                    android:hint ="Masukkan NIM"
+                    android:textColorHint="#AAAAAA"
+                    android:inputType="number"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="#1A1A1A"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Program Studi"
+                    android:textColor="#3D5AFE"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/pilihProdi"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:drawable/divider_horizontal_bright" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Kelamin"
+                    android:textColor="#3D5AFE"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/kelamin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/laki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:buttonTint="#3D5AFE"
+                        android:text="Laki-laki"
+                        android:textColor="#1A1A1A"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/perempuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#3D5AFE"
+                        android:text="Perempuan"
+                        android:textColor="#1A1A1A"
+                        android:textSize="13sp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hobi (Bisa pilih lebih dari 1)"
+                    android:textColor="#3D5AFE"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/buku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:buttonTint="#3D5AFE"
+                    android:text="Membaca buku"
+                    android:textColor="#1A1A1A"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/musik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#3D5AFE"
+                    android:text="Mendengarkan musik"
+                    android:textColor="#1A1A1A"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/olahraga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:buttonTint="#3D5AFE"
+                    android:text="Olahraga"
+                    android:textColor="#1A1A1A"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnTampil"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#3D5AFE"
+                    android:text="TAMPILKAN PROFIL"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
